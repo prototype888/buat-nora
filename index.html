@@ -98,7 +98,12 @@
 
       setTimeout(kpemb, 200);
     }
-    async function menuju(){pesanwhatsapp = "" + nama + " mau kok jd pacar km >< ><";await swals.fire('OK!', 'jangan di klik OK kita belom tukeran wa😓😓😭', 'success');window.location = "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;}
+async function menuju() {
+    pesanwhatsapp = encodeURIComponent(nama + " mau kok jd pacar km >< ><");
+    await swals.fire('OK!', 'jangan di klik OK kita belom tukeran wa😓😓😭', 'success');
+    window.location = "https://api.whatsapp.com/send?phone=6281234567890&text=" + pesanwhatsapp;
+}
+
   </script>
 </body>
 
