@@ -114,7 +114,7 @@
       if (result.isConfirmed) {
         let message = encodeURIComponent('aku mau kok jd pacar kamu ><');
         
-        window.open(`https://api.whatsapp.com/send?phone=&text=${message}`);
+        window.location.href = `https://api.whatsapp.com/send?phone=&text=${message}`;
       }
     });
   }
