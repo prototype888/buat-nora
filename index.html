@@ -94,12 +94,31 @@
       });
 
       katangetik = "<b>iyalaaa, kan yang lucu di dunia ini<br>cuma <b class='putih merah fontalt'>kamuu</b> mwhehe >< 😝🤏<br><br>aku kayanya flu dehh<br>fluing love with youu 🫠🥰💐</br></br>duhh kok km cakepp bangettt yhhh</br>berasal dr planet mana cb😏😔😑😣😡😠🥺";
-      katangetik2 = "<b class='putih merah fontalt'><i>2 3 ikan cucut, youre so cuteee</i> 💐🫣🩷</b><br><br><a href='https://wa.me/62xxxxxxxxxx' class='putih merah fontalt'>Balas di WhatsApp 💬</a>";
+      katangetik2 = "<b class='putih merah fontalt'><i>2 3 ikan cucut, youre so cuteee</i> 💐🫣🩷</b><br><br><button onclick='showReplyModal()' class='putih merah fontalt'>Balas 💬</button>";
 
       setTimeout(kpemb, 200);
     }
 
   </script>
+  <script type="text/javascript">
+  function showReplyModal() {
+    Swal.fire({
+      title: 'Balas di WhatsApp',
+      text: 'Klik OK untuk membuka WhatsApp',
+      icon: 'info',
+      showCancelButton: false,
+      confirmButtonText: 'OK'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Ganti nomor dan teks sesuai keinginan
+        let phoneNumber = '62xxxxxxxxxx'; // Ganti dengan nomor tujuan
+        let message = encodeURIComponent('Halo! Aku balas dari pesan yang lucu tadi 🫣');
+        
+        window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+      }
+    });
+  }
+</script>
 </body>
 
 </html>
